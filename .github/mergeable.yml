@@ -8,6 +8,3 @@ mergeable:
       - do: label
         must_include:
           regex: 'ready for release'
-      - do: base
-        must_include:
-          regex: 'develop'
