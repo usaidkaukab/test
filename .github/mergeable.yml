@@ -1,0 +1,13 @@
+version: 2
+mergeable:
+  - when: pull_request.*
+    validate:
+      - do: title
+        begins_with:
+          match: [Feature]
+      - do: label
+        must_include:
+          regex: 'ready for release'
+      - do: base
+        must_include:
+          regex: 'develop'
